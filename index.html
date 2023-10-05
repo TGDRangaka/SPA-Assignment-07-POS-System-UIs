@@ -15,20 +15,20 @@
     <nav id="nav_bar" class="navbar bg-body-tertiary mb-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-              <img src="assests/Ijse_logo 1.png" alt="Logo" class="d-inline-block align-text-top">
+              <img src="assests/logo.png" alt="Logo" class="d-inline-block align-text-top">
             </a>
             <ul class="nav nav-underline">
                 <li id="aaa" class="nav-item">
-                  <a id="dashborad" class="nav-link active" aria-current="page" href="">Dashboard</a>
+                  <a id="dashboard" class="nav-link">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                  <a id="customer" class="nav-link" href="">Customer</a>
+                  <a id="customer" class="nav-link">Customer</a>
                 </li>
                 <li class="nav-item">
-                  <a id="item" class="nav-link" href="">Item</a>
+                  <a id="item" class="nav-link">Item</a>
                 </li>
                 <li class="nav-item">
-                  <a id="order" class="nav-link" href="">Order</a>
+                  <a id="order" class="nav-link">Order</a>
                 </li>
             </ul>
         </div>
@@ -298,18 +298,20 @@
             <div class="col">
                 <table class="table table-bordered">
                     <thead>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Salary</th>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
                     </thead>
 
                     <tbody>
                     <tr>
-                        <td>001</td>
-                        <td>Dilshan</td>
-                        <td>Panadura</td>
-                        <td>10000</td>
+                        <td>I001</td>
+                        <td>Ice Cream</td>
+                        <td>480.00</td>
+                        <td>3</td>
+                        <td>1440.00</td>
                     </tr>
                     </tbody>
                 </table>
@@ -317,5 +319,37 @@
         </div>
     </section>
 
+    <script src="assests/jquerry/jquery.min.js"></script>
+    <script>
+        const displayNoneSections = () => {
+            $("#dashboard-section").css("display", "none");
+            $("#customer-section").css("display", "none");
+            $("#item-section").css("display", "none");
+            $("#order-section").css("display", "none");
+        }
+        displayNoneSections();
+        $("#dashboard-section").css("display", "block");
+
+        $("#dashboard").on('click', () => {
+            displayNoneSections();
+            $("#dashboard-section").css("display", "block");
+        });
+
+        $("#customer").on('click', () => {
+            displayNoneSections();
+            $("#customer-section").css("display", "block");
+        });
+
+        $("#item").on('click', () => {
+            displayNoneSections();
+            $("#item-section").css("display", "block");
+        });
+
+        $("#order").on('click', () => {
+            displayNoneSections();
+            $("#order-section").css("display", "block");
+        });
+
+    </script>
 </body>
 </html>
